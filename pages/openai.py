@@ -8,7 +8,7 @@ import base64  # Importez la bibliothèque base64
 import openai
 
 # Définissez votre clé API OpenAI
-openai.api_key = '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'
+openai.api_key = 'YOUR_API_KEY'
 
 def generate_and_display_image(prompt):
     # Generate image from text
