@@ -3,3 +3,4 @@ sqlalchemy==1.4.0
 openai==0.28.0
 pandas
 bs4
+IPython
