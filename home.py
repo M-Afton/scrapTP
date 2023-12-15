@@ -19,10 +19,10 @@ Cette application scrape les données du site [noveldeglace.com](https://novelde
 st.sidebar.title("LHERBIER Clément")
 st.divider()
 st.sidebar.markdown("""
-                    Le site <a href="https://noveldeglace.com/nouvelles/" style="color: white; text-decoration: none;">noveldeglace.com</a> est un site qui regroupe des traductions benevole de romans japonais en français.
+                    Le site <a href="https://noveldeglace.com/nouvelles/" style="color: yellow; text-decoration: none;">noveldeglace.com</a> est un site qui regroupe des traductions benevole de romans japonais en français.
                     """, unsafe_allow_html=True)
 st.sidebar.markdown("""
-                    <a href="https://m-afton-scraptp-home-h4nsrx.streamlit.app/openai" style="color: white; text-decoration: none;">lien vers le site deployer</a>
+                    <a href="https://m-afton-scraptp-home-h4nsrx.streamlit.app/openai" style="color: yellow; text-decoration: none;">lien vers le site deployer</a>
                     """, unsafe_allow_html=True)
 
 pages = st.slider('Nombre de pages', 1, 201 , 1)#il ya 1197 pages mais je ne peux pas toutes les scraper car cela prendrait trop de temps et en 201 pages on a deja 2000 lignes

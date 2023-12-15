@@ -38,11 +38,11 @@ def main():
 
 st.sidebar.title("LHERBIER Clément")
 st.sidebar.markdown("""
-    Le site <a href="https://noveldeglace.com/nouvelles/" style="color: white; text-decoration: none;">noveldeglace.com</a> est un site qui regroupe des traductions benevole de romans japonais en français.
+    Le site <a href="https://noveldeglace.com/nouvelles/" style="color: yellow; text-decoration: none;">noveldeglace.com</a> est un site qui regroupe des traductions benevole de romans japonais en français.
     """, unsafe_allow_html=True)
 
 st.sidebar.markdown("""
-                    <a href="https://m-afton-scraptp-home-h4nsrx.streamlit.app/openai" style="color: white; text-decoration: none;">lien vers le site deployer</a>
+                    <a href="https://m-afton-scraptp-home-h4nsrx.streamlit.app/openai" style="color: yellow; text-decoration: none;">lien vers le site deployer</a>
                     """, unsafe_allow_html=True)
 
 if __name__ == "__main__":
