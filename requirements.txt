@@ -1,0 +1,7 @@
+bs4
+sqlalchemy
+csv
+requests
+json
+pandas
+streamlit
