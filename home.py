@@ -17,13 +17,19 @@ Cette application scrape les données du site [noveldeglace.com](https://novelde
 """)
 
 st.sidebar.title("LHERBIER Clément")
+st.divider()
+st.sidebar.markdown("""
+                    Le site <a href="https://noveldeglace.com/nouvelles/" style="color: white; text-decoration: none;">noveldeglace.com</a> est un site qui regroupe des traductions benevole de romans japonais en français.
+                    """, unsafe_allow_html=True)
 
 pages = st.slider('Nombre de pages', 1, 201 , 1)#il ya 1197 pages mais je ne peux pas toutes les scraper car cela prendrait trop de temps et en 201 pages on a deja 2000 lignes
 
 if st.button('Lancer le Scraping'):
     with st.spinner('Chargement en cours...'):
 
-        results = scraping_and_store(pages)  # Passer le nombre de pages sélectionné
+        progress_bar = st.progress(0)
+
+        results = scraping_and_store(pages, progress_bar)  # Passer le nombre de pages sélectionné
 
         df = pd.DataFrame(results)
 

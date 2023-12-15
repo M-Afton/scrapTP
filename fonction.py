@@ -40,7 +40,7 @@ class DataBase():
         stmt = db.select([table])
         return self.connection.execute(stmt).fetchall()
 
-def scraping_and_store(pages=1):
+def scraping_and_store(pages=1, progress_bar=None):
     base_url = 'https://noveldeglace.com/nouvelles/page/'
     # Initialize the database
     database = DataBase(name_database='MaBaseDeDonnees')
@@ -100,6 +100,11 @@ def scraping_and_store(pages=1):
 
             article_list.append(article_data)
 
+        # Update the progress bar
+        progress_value = (page_num / float(pages)) # Convert pages to float
+        if progress_bar:
+            progress_bar.progress(progress_value)
+
     # Store data in CSV
     with open('bdm.csv', 'a', newline='', encoding='utf-8') as csvfile:
         fieldnames = ['title', 'date', 'link', 'image', 'categorie']
@@ -117,5 +122,7 @@ def scraping_and_store(pages=1):
         database.add_row('Tableau1', **article_data)
 
     return article_list
+
+
 if __name__ == "__main__":
     scraping_and_store()
